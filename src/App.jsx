@@ -3,6 +3,8 @@ import Card from "./components/Card";
 import CardForm from "./components/CardForm";
 import { useEffect, useState } from "react";
 import Button from "./components/Button";
+import reactLogo from "./assets/react-logo.png";
+import tailwindLogo from "./assets/tailwind-logo.png";
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("darkMode") === "true";
@@ -23,14 +25,14 @@ function App() {
       description:
         "Learn how to build web applications with React and Tailwind CSS.",
       buttonText: "Learn More",
-      imageUrl: "https://placehold.co/100x50?text=React+Image",
+      imageUrl: reactLogo,
     },
     {
       id: 2,
       title: "Tailwind CSS Mastery",
       description: "Master the art of rapid UI development with Tailwind CSS.",
       buttonText: "Explore",
-      imageUrl: "https://placehold.co/100x50?text=Tailwind+Image",
+      imageUrl: tailwindLogo,
     },
   ];
 
@@ -59,10 +61,6 @@ function App() {
     }
   };
   const resetDefault = () => {
-    if (cardData.length > 0) {
-      return;
-    }
-
     if (confirm("Are you sure you want to reset to default cards?")) {
       setCardData([...defaultCards]);
     }

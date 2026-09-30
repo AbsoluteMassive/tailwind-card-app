@@ -70,7 +70,7 @@ function App() {
   const arr = [...cardData].reverse();
   return (
     <div className="container mx-auto p-4 dark:bg-gray-800 min-h-screen">
-      <div className="flex flex-row justify-between items-center justity-items-center gap-2">
+      <div className="flex flex-row justify-center items-center  gap-2">
         <Button
           Btext={darkMode === true ? "Light Mode" : "Dark Mode"}
           onClick={toggleDarkMode}
@@ -81,7 +81,7 @@ function App() {
         />
         <Button
           onClick={resetDefault}
-          Btext={"Reset to default"}
+          Btext={"Reset default"}
           type="button"
           className={
             " bg-red-500 text-white font-bold py-2 px-4 rounded transition-transform duration-200 ease-out active:scale-95"
